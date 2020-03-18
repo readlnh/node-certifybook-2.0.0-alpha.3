@@ -1,11 +1,13 @@
-# Substrate Node Template
+# Substrate Node Certifybook
 
 A new Substrate node, ready for hacking. This node includes:
 
 * A FRAME-based runtime
-* A template pallet
+* A certifybook pallet
 * Aura block authoring
 * Grandpa finality gadget
+
+The runtime based on Substrate 2.0.0-alpha.3.
 
 ## Build
 
@@ -34,13 +36,13 @@ cargo build --release
 Purge any existing developer chain state:
 
 ```bash
-./target/release/node-template purge-chain --dev
+./target/release/node-certifybook purge-chain --dev
 ```
 
 Start a development chain with:
 
 ```bash
-./target/release/node-template --dev
+./target/release/node-certifybook --dev
 ```
 
 Detailed logs may be shown by running the node with the following environment variables set: `RUST_LOG=debug RUST_BACKTRACE=1 cargo run -- --dev`.
@@ -79,29 +81,3 @@ cargo run -- \
 ```
 
 Additional CLI usage options are available and may be shown by running `cargo run -- --help`.
-
-## Advanced: Generate Your Own Substrate Node Template
-
-A substrate node template is always based on a certain version of Substrate. You can inspect it by
-opening [Cargo.toml](Cargo.toml) and see the template referred to a specific Substrate commit(
-`rev` field), branch, or version.
-
-You can generate your own Substrate node-template based on a particular Substrate
-version/commit by running following commands:
-
-```bash
-# git clone from the main Substrate repo
-git clone https://github.com/paritytech/substrate.git
-cd substrate
-
-# Switch to a particular branch or commit of the Substrate repo your node-template based on
-git checkout <branch/tag/sha1>
-
-# Run the helper script to generate a node template.
-# This script compiles Substrate and takes a while to complete. It takes a relative file path
-#   from the current dir. to output the compressed node template.
-.maintain/node-template-release.sh ../node-template.tar.gz
-```
-
-Noted though you will likely get faster and more thorough support if you stick with the releases
-provided in this repository.
