@@ -181,7 +181,7 @@ version = '2.0.0-alpha.3'
 [dependencies.certifybook]
 default-features = false
 package = 'pallet-certifybook'
-path = '../pallets/template'
+path = '../pallets/certifybook'
 version = '2.0.0-alpha.3'
 
 [dependencies.timestamp]
