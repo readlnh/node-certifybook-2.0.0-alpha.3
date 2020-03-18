@@ -204,7 +204,7 @@ impl balances::Trait for Runtime {
 
 parameter_types! {
 	pub const TransactionBaseFee: Balance = 0;
-	pub const TransactionByteFee: Balance = 1;
+	pub const TransactionByteFee: Balance = 0;
 }
 
 impl transaction_payment::Trait for Runtime {
@@ -241,7 +241,7 @@ construct_runtime!(
 		TransactionPayment: transaction_payment::{Module, Storage},
 		Sudo: sudo::{Module, Call, Config<T>, Storage, Event<T>},
 		// Used for the module template in `./template.rs`
-		TemplateModule: template::{Module, Call, Storage, Event<T>},
+		CertifybookModule: template::{Module, Call, Storage, Event<T>},
 	}
 );
 

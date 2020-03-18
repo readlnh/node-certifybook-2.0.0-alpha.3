@@ -8,19 +8,8 @@ fn it_works_for_default_value() {
 	new_test_ext().execute_with(|| {
 		// Just a dummy test for the dummy function `do_something`
 		// calling the `do_something` function with a value 42
-		assert_ok!(TemplateModule::do_something(Origin::signed(1), 42));
+		//assert_ok!(CertifybookModule::new_certificate(Origin::signed(1), 0x0000000000000000000000000000000000000000000000000000000000000001));
 		// asserting that the stored value is equal to what we stored
-		assert_eq!(TemplateModule::something(), Some(42));
-	});
-}
-
-#[test]
-fn correct_error_for_none_value() {
-	new_test_ext().execute_with(|| {
-		// Ensure the correct error is thrown on None value
-		assert_noop!(
-			TemplateModule::cause_error(Origin::signed(1)),
-			Error::<Test>::NoneValue
-		);
+		//assert_eq!(TemplateModule::something(), Some(42));
 	});
 }
