@@ -37,7 +37,7 @@ package = 'sp-finality-grandpa'
 rev = '013c1ee167354a08283fb69915fda56a62fee943'
 version = '2.0.0-alpha.3'
 
-[dependencies.node-template-runtime]
+[dependencies.node-certifybook-runtime]
 path = '../runtime'
 version = '2.0.0-alpha.3'
 
