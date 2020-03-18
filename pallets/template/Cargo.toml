@@ -31,7 +31,7 @@ description = 'FRAME pallet template'
 edition = '2018'
 homepage = 'https://substrate.dev'
 license = 'Unlicense'
-name = 'pallet-template'
+name = 'pallet-certifybook'
 repository = 'https://github.com/paritytech/substrate/'
 version = '2.0.0-alpha.3'
 [dependencies.codec]
